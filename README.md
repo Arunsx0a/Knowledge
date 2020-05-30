@@ -14,4 +14,5 @@ https://www.youtube.com/watch?v=SGZ6BttHMPw&list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNm
 
 # Deep Learning Articles 
 https://www.deeplearningbook.org/ 
+
 https://ml-cheatsheet.readthedocs.io/en/latest/nn_concepts.html
