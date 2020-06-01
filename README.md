@@ -18,3 +18,5 @@ https://www.deeplearningbook.org/
 https://ml-cheatsheet.readthedocs.io/en/latest/nn_concepts.html
 
 https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/   (Back Propagation)
+
+https://blog.paperspace.com/pytorch-101-understanding-graphs-and-automatic-differentiation/ (Back Propagation)
