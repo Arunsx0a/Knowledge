@@ -1,0 +1,34 @@
+This link helps to understand how SAS/ACCESS interface works
+
+https://documentation.sas.com/?docsetId=acreldb&docsetTarget=n0ujmhdp3hha0zn1poqbtkdnrj3y.htm&docsetVersion=9.4&locale=en
+Example
+/* Add a libref to access a Greenplum database. */
+libname mydblib greenplm server=mygpserver db=customers port=5432
+                user=myuser password=gppwd;
+
+/* Add a libref to the CAS server. */
+libname c cas;
+
+/* Load data into the SAS client. */
+data mysasdat;
+   set mydblib.myGPtab;
+run;
+
+/* Load SAS client data into a CAS session.              */
+/* By default, the connection goes to the active caslib. */
+data c.mycasdat;
+   set mysasdat;
+run;
+
+/* Additional code to run analyses in CAS goes here. */
+
+/* Optional: write CAS results back to the SAS client. */
+data myreslts;
+   set c.results;
+run;
+
+/* Optional: write the results out to the Greenplum database. */
+data mydblib.results;
+   set myreslts;
+run;
+
